@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indicadores de Engajamento e Avaliações</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+
+  <link rel="stylesheet" href="Indicadores.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <a href="../Perfil - Estabelecimento/perfil_Estabelecimento.html" class="back-arrow"><span class="material-icons-outlined">arrow_back</span></a>
+      <div class="header-left"></div>
+      <nav>
+        <a href="../home/home.html">Home</a>
+      </nav>
+      <div class="icons">
+        <a href="#" class="search-icon"><span class="material-icons-outlined">search</span></a>
+        <a href="#" class="profile-icon"><span class="material-icons-outlined">account_circle</span></a>
+      </div>
+    </header>
+
+    <main>
+      <h1>Indicador de Engajamento de Estabelecimentos</h1>
+
+      <div class="indicator" aria-label="Barra de progresso do percentual de estabelecimentos favoritados">
+        <div class="bar" id="progressBarEngajamento">0%</div>
+      </div>
+
+      <div class="info" id="infoTextEngajamento">Calculando...</div>
+
+      <h1 style="margin-top: 3rem;">Percentual de Avaliações Negativas do Restaurante</h1>
+
+      <div class="indicator" aria-label="Barra de progresso do percentual de avaliações negativas">
+        <div class="bar" id="progressBarAvaliacoesNegativas">0%</div>
+      </div>
+
+      <div class="info" id="infoTextAvaliacoesNegativas">Calculando...</div>
+
+      <h1 style="margin-top: 3rem;">Taxa de Resposta às Avaliações</h1>
+
+      <div class="indicator" aria-label="Barra de progresso da taxa de resposta às avaliações">
+        <div class="bar" id="progressBarTaxaResposta">0%</div>
+      </div>
+
+      <div class="info" id="infoTextTaxaResposta">Calculando...</div>
+
+      <h1 style="margin-top: 3rem;">Taxa de Comparecimento às Reservas</h1>
+
+      <div class="indicator" aria-label="Barra de progresso da taxa de comparecimento às reservas">
+        <div class="bar" id="progressBarTaxaComparecimento">0%</div>
+      </div>
+
+      <div class="info" id="infoTextTaxaComparecimento">Calculando...</div>
+
+    </main>
+  </div>
+
+  <script src="Indicadores.js"></script>
+</body>
+</html>
