@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="editar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>Editar Perfil</title>
+    <script src="editar.js"></script>
+</head>
+<body>
+    <div class="botao-voltar-container">
+        <a href="../Perfil - Usuário/perfil_usuario.html" class="botao-voltar">← Voltar</a>
+    </div>
+    <section class="edit-form">
+        <h1>Editar informações</h1>
+        <h2>Informações do perfil</h2>
+        <p>Insira as informações que queira editar:</p>
+
+        <form method="POST" enctype="multipart/form-data">
+            <label for="description">Descrição</label>
+            <input type="text" id="description" name="description" placeholder="Digite a descrição" required>
+            
+            <label for="perfil">Foto de perfil</label>
+            <div class="file-input-container">
+                <label class="custom-file-button" for="perfil">
+                    Escolher Arquivo
+                    <input type="file" id="perfil" name="perfil" accept="image/*" required>
+                </label>
+                
+            </div>
+            <div id="file-name-container">
+                <span class="file-name">Nenhum arquivo escolhido</span>
+            </div>
+        </form>
+
+        <h2>Informações da conta</h2>
+        <p>Insira as informações que queira editar:</p>
+
+        <form>
+            <label for="name">Seu nome</label>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+            
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" placeholder="Digite uma senha" required>
+            
+            <label for="confirm-password">Confirme sua senha</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Repita sua senha" required>
+            
+            <button type="submit" id="confirmarBtn">Confirmar</button>
+        </form>
+
+        <!-- Botão para abrir o popup -->
+        <p><button type="button" class="btn btn-primary" id="openModal">Excluir Conta</button></p>
+
+        <!-- Popup oculto inicialmente -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Deseja mesmo excluir sua conta?</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <p>ESSA AÇÃO É IRREVERSÍVEL</p>
+                        <button type="button" class="btn btn-secondary" id="closeModal">CANCELAR</button>
+                        <button class="btn btn-danger" id="deleteAccount">
+                            <i class="fa-solid fa-trash"></i> EXCLUIR
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
