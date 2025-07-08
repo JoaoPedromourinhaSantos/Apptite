@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Reservas - Apptite</title>
+    <link rel="stylesheet" href="gerenciarReservas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <span class="logo">Apptite</span>
+    </header>
+    <a href="#" id="voltarPerfilEstabelecimento" class="nav-back">← Voltar ao Perfil</a>
+
+    <div class="container">
+        <h1 id="establishmentName" class="establishment-name">Gerenciamento de Reservas</h1>
+        <div class="tabs">
+            <button class="tab-button active" data-tab="solicitadas">Solicitadas</button>
+            <button class="tab-button" data-tab="agendadas">Marcadas (Agendadas)</button>
+            <button class="tab-button" data-tab="recusadas">Recusadas</button>
+            <button class="tab-button" data-tab="passadas">Passadas</button>
+            <button class="tab-button" data-tab="finalizadas">Finalizadas</button>
+            <button class="tab-button" data-tab="metricas">Métricas</button> 
+        </div>
+
+        <div id="tab-solicitadas" class="tab-content active">
+            <h2>Reservas Solicitadas</h2>
+            <div id="listaReservasSolicitadas" class="reservas-grid">
+                <p class="loading">Carregando reservas solicitadas...</p>
+            </div>
+        </div>
+
+        <div id="tab-agendadas" class="tab-content">
+            <h2>Reservas Marcadas (Agendadas)</h2>
+            <div id="listaReservasAgendadas" class="reservas-grid">
+                <p class="loading">Carregando reservas agendadas...</p>
+            </div>
+        </div>
+
+        <div id="tab-recusadas" class="tab-content">
+            <h2>Reservas Recusadas</h2>
+            <div id="listaReservasRecusadas" class="reservas-grid">
+                <p class="loading">Carregando reservas recusadas...</p>
+            </div>
+        </div>
+        
+        <div id="tab-passadas" class="tab-content">
+            <h2>Histórico de Reservas Passadas</h2>
+            <div id="listaReservasPassadas" class="reservas-grid">
+                <p class="loading">Carregando histórico de reservas...</p>
+            </div>
+        </div>
+
+        <div id="tab-finalizadas" class="tab-content">
+            <h2>Reservas Comparecidas</h2>
+            <div id="listaReservasFinalizadas" class="reserva-list"></div>
+        </div>
+
+        <div id="tab-metricas" class="tab-content">Add commentMore actions
+            <h2>Métricas de Desempenho</h2>
+            <div class="metricas-grid">
+                <div class="metricas-card">
+                    <h3>Taxa de Comparecimento às Reservas</h3>
+                    <p id="taxaComparecimentoValor">Carregando...</p>
+                    <p class="descricao-metrica">Percentual de reservas  comparecidas em relação ao total de reservas aceitas/agendadas.</p>
+                </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="gerenciarReservas.js"></script>
+</body>
+</html>

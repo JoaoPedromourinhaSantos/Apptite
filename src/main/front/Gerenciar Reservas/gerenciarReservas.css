@@ -1,0 +1,257 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #800000; /* Vermelho Apptite */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-back {
+    display: inline-block;
+    background-color: #600000; /* Tom mais escuro de vermelho */
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 15px 20px; /* Adicionado margin-left também */
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-back:hover {
+    background-color: #400000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.establishment-name {
+    text-align: center;
+    color: #800000; /* Vermelho Apptite */
+    margin-bottom: 25px;
+    font-size: 2em; /* Tamanho maior para o título da página */
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #800000; /* Vermelho Apptite */
+    flex-wrap: wrap; /* Permite que as abas quebrem linha em telas menores */
+}
+
+.tab-button {
+    padding: 12px 25px; /* Mais padding */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 5px;
+    margin-bottom: -1px; /* Para sobrepor a borda inferior da div .tabs */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    outline: none; /* Remove o outline padrão do foco */
+}
+
+.tab-button:hover {
+    background-color: #e0e0e0;
+}
+
+.tab-button.active {
+    background-color: #800000; /* Vermelho Apptite */
+    color: white;
+    border-color: #800000; /* Vermelho Apptite */
+    border-bottom: 1px solid #800000; /* Para a aba ativa parecer conectada ao conteúdo */
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #fff; /* Fundo para o conteúdo da aba */
+    border: 1px solid #ddd; /* Borda sutil */
+    border-top: none; /* Remove a borda superior pois as abas já têm */
+    border-radius: 0 0 5px 5px; /* Arredonda cantos inferiores */
+    min-height: 200px; /* Altura mínima para evitar colapso com conteúdo dinâmico */
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    margin-top: 0;
+    color: #800000; /* Vermelho Apptite */
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.reservas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Ajustado minmax */
+    gap: 20px;
+}
+
+.reserva-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-left: 5px solid #800000; /* Destaque lateral */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.reserva-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.reserva-card h3 {
+    margin-top: 0;
+    color: #800000; /* Vermelho Apptite */
+    font-size: 1.2em; /* Aumentado */
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.reserva-card p {
+    margin: 8px 0; /* Mais espaçamento */
+    font-size: 0.95em;
+    color: #333;
+}
+
+.reserva-card p strong {
+    color: #555;
+    min-width: 100px; /* Para alinhar os valores */
+    display: inline-block;
+}
+
+.reserva-actions {
+    margin-top: 15px; /* Mais espaço */
+    padding-top: 15px; /* Mais espaço */
+    border-top: 1px solid #f0f0f0; /* Linha separadora */
+    display: flex; /* Para alinhar botões */
+    gap: 10px; /* Espaço entre botões */
+    flex-wrap: wrap; /* Para botões quebrarem linha se necessário */
+}
+
+.reserva-actions button {
+    padding: 10px 15px; /* Mais padding nos botões */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    /* margin-right: 5px; -- Removido, usando gap */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.reserva-actions button:hover {
+    transform: translateY(-1px); /* Efeito sutil de elevação */
+}
+
+.btn-aceitar {
+    background-color: #28a745; /* Verde */
+    color: white;
+}
+.btn-aceitar:hover { background-color: #218838; }
+
+.btn-recusar {
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+}
+.btn-recusar:hover { background-color: #c82333; }
+
+.btn-cancelar-est {
+    background-color: #ffc107; /* Amarelo */
+    color: #212529; /* Texto escuro para contraste com amarelo */
+}
+.btn-cancelar-est:hover { background-color: #e0a800; }
+
+.loading, .no-reservas {
+    text-align: center;
+    padding: 30px 20px; /* Mais padding */
+    color: #777;
+    font-style: italic;
+    font-size: 1.1em; /* Maior */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column; /* Abas em coluna */
+    }
+    .tab-button {
+        margin-right: 0;
+        margin-bottom: 2px; /* Espaço entre abas na vertical */
+        border-radius: 5px; /* Arredondar todos os cantos */
+        border-bottom: 1px solid #ccc; /* Adicionar borda inferior quando em coluna */
+    }
+    .tab-button.active {
+        border-bottom: 1px solid #800000;
+    }
+    .reservas-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+    .container {
+        padding: 0 10px; /* Menos padding lateral */
+    }
+}
+
+/* Estilos para a nova grade de métricas */Add commentMore actions
+.metricas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Estilos para o card individual da métrica */
+.metricas-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-left: 5px solid #ffcc00; /* Cor amarela do seu tema */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.metricas-card h3 {
+    margin-top: 0;
+    color: #800000;
+    font-size: 1.3em;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.metricas-card p {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.metricas-card .descricao-metrica {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 5px;
+}
