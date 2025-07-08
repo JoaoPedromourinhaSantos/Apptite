@@ -1,2 +1,2 @@
 # Apptite
-Site onde o cliente consegue encontrar a sua melhor escolha na onde ele estiver a partir das suas preferências pré definidas
+O objetivo deste projeto é criar uma plataforma de busca de restaurantes altamente personalizada, permitindo que os usuários filtrem estabelecimentos com base em critérios específicos, como tipo de culinária, faixa de preço, distância e avaliações. A ideia é oferecer uma experiência de pesquisa mais eficiente e relevante, tanto para consumidores que buscam uma refeição alinhada às suas preferências quanto para os que precisam de recomendações confiáveis em locais desconhecidos.
