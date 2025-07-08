@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Apptite | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    </head>
+<body>
+
+    <header>
+        <nav>
+            <span class="logo">Apptite</span>
+            <div class="nav-icons">
+            <a href="../Login/login.html" class="profile-icon" id="link-perfil"><span class="material-icons-outlined">account_circle</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Explore, saboreie, repita!</h1>
+            <h2>Encontre seu próximo destino gastronômico aqui!</h2>
+            <p>O Apptite oferece uma experiência completa, com recomendações e avaliações reais.</p>
+            <p>Descubra os segredos culinários da sua cidade!</p>
+
+            <div class="buttons">
+                <a href="../Cadastro - Usuário/cadastrousuário.html" class="btn yellow">Fazer Cadastro</a>
+                <a href="../Login/login.html" class="btn red">Fazer Log-in</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="features-header"> <h2>Recomendações confiáveis para satisfazer seu apetite!</h2>
+                <button id="abrirFiltrosBtn" class="btn-filtros">
+                    <span class="material-icons-outlined">filter_list</span> Filtrar
+                </button>
+            </div>
+            <div class="card-container">
+                </div>
+        </section>
+    </main>
+
+    <div id="popupFiltros" class="popup-overlay" style="display: none;">
+        <div class="popup-content">
+            <button class="fechar" id="fecharPopupFiltrosBtn">×</button>
+            <h2>Filtros</h2>
+            <hr />
+            <p>Encontre estabelecimentos que correspondam a todos os seus critérios.</p>
+            <div id="listaFiltrosPopup" class="filtros-list">
+                </div>
+            <div class="botoes">
+                <button class="btn-cancelar" id="limparFiltrosBtn">LIMPAR</button>
+                <button class="btn-confirmar" id="aplicarFiltrosBtn">APLICAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+    <script src="../Header/header.js"></script>
+
+</body>
+</html>
