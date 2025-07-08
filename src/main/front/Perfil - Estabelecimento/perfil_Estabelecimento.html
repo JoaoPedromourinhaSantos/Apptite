@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title> "Perfil Estabelecimento - Apptite" </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="perfilEst.css">
+</head>
+
+<body>
+
+    <!--  Navbar  -->
+    <header>
+        <nav>
+            <a href="#" class="back-button"></a>
+            <span class="logo">Apptite</span>
+            <div class="nav-links">
+                <a href="../Home/home.html" class="nav-link">Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!--  Direcionar para editar/excluir  -->
+    <div class="edit-container">
+        <a href="../Editar - Estabelecimento/editarPerfilEstabelecimento.html" class="edit-button">✎ Editar</a>
+        <a href="../Editar - Estabelecimento Horario/editarPerfilEstabelecimentoHorario.html" class="edit-button">🕒 Editar Horário de Funcionamento</a>
+        <a href="#" id="editarFiltrosBtn" class="edit-button">🏷️ Gerenciar Filtros</a>
+        <a href="#" id="verMetricasBtn" class="edit-button">Ver Métricas</a>
+    </div>
+    
+
+    <button id="logoutBtn">Log-Out</button>
+
+    <!--  Estabelecimento dados  -->
+    <section class="dadosUser">
+        <div class="box">
+            <h1> Nome Estabelecimento </h1>
+            <p> Descrição / Biografia</p>
+            <p> ★★★★☆ 4,5 </p>
+            <p>Media de preço</p>
+        </div>
+
+        <div class="endereco-contato-box">
+            <div class="box-descricao">
+                <h4> Endereço </h4>
+                </div>
+            <div class="box-contato-info"> <h4> Entre em contato conosco</h4>
+                <p class="telefone-info"> Telefone: (XX) XXXXX-XXXX </p>
+                <p class="email-info"> E-mail: email@exemplo.com </p>
+            </div>
+        </div>
+
+        <div class="horarios-box">
+            <h4> Horário de funcionamento </h4>
+            <div class="horarios-funcionamento" id="horariosFuncionamento">  </div>
+        </div>
+
+      <div class="filtros-box">
+            <h4>Filtros Ativos</h4>
+            <div id="filtrosAtivos" class="filtros-container">  </div>
+        </div>  
+
+    </section>
+
+    <!--  Direcionar para tabela de Reserva  registradas -->
+    <div class="chat-container">
+        <a id="gerenciarReservasBtn" class="chat-button"> Gerenciar Reservas </a>
+    </div>
+
+    <!-- Fotos do espaça do Estabelecimento -->
+    <section class="box-local">
+        <h2>Fotos do local</h2>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="" alt="Foto 01">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="" alt="Foto 02">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-img">
+                        <img src="" alt="Foto 03">
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Cardápio Foto -->
+    <section class="box-cardapio">
+        <h2> Cardápio da casa </h2>
+
+        <div class="imagens-cardapio">
+            <img alt="Foto do cardápio" id="cardapioImg" style="display: none;">
+            <p id="cardapio-status">Carregando cardápio...</p>
+        </div>
+    </section>
+
+    <!-- Avaliações recebidas -->
+    <section class="box-avaliacao">
+        <h2>Avaliações Recebidas</h2>
+        <div id="lista-avaliacoes-recebidas">
+            <p>Carregando avaliações...</p>
+        </div>
+    </section>
+
+
+    <!-- JavaScrip para carrossel -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+    <script src="perfilEst.js"></script>
+
+
+    <!-- Popup: Responder Avaliação -->
+
+    
+    <div id="popupAvaliacao" class="popup-overlay" style="display: none;">
+
+        <div class="popup-content">
+        <button class="fechar" onclick="fecharPopup()"> × </button>
+        <h2>Responder avaliação</h2>
+        <hr class="linha-topo" />
+    
+        <div class="usuario-info">
+            <img src="" alt="Foto perfil" class="foto-perfil">
+            <div class="nome-estrelas">
+            <p class="nome-usuario">Nome do usuário</p>
+            <div class="estrelas">★★★★☆</div>
+            </div>
+        </div>
+    
+        <div class="textos">
+            <div class="campo">
+            <label>Comentário</label>
+            <textarea readonly>Texto do comentário do cliente...</textarea>
+            </div>
+            <div class="campo">
+            <label>Sua resposta:</label>
+            <textarea maxlength="500" placeholder="Digite sua resposta aqui..."></textarea>
+            </div>
+        </div>
+    
+        <div class="botoes">
+            <button class="btn-confirmar" onclick="confirmarResposta()">CONFIRMAR</button>
+        </div>
+        </div>
+    </div>
+
+    <div id="popupFiltros" class="popup-overlay" style="display: none;">
+        <div class="popup-content">
+            <button class="fechar" id="fecharPopupFiltrosBtn">×</button>
+            <h2>Gerenciar Filtros</h2>
+            <hr class="linha-topo" />
+
+            <p>Selecione os filtros que se aplicam ao seu estabelecimento.</p>
+
+            <div id="listaFiltrosPopup">
+                <p>Carregando filtros...</p>
+            </div>
+
+            <div class="botoes">
+                <button class="btn-cancelar" id="cancelarFiltrosBtn">CANCELAR</button>
+                <button class="btn-confirmar" id="salvarFiltrosBtn">SALVAR</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
