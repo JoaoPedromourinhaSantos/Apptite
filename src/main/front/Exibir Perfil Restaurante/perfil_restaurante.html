@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Kanpai</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="logo">Apptite</span>
+            <div class="nav-links">
+                <a href="../home/home.html" class="nav-link">Home</a>
+                <a href="../Perfil estabelecimento (visão cliente)/perfil.html" class="nav-link">Restaurantes</a>
+            </div>
+            <div class="nav-icons">
+            <a href="../Login/login.html" class="profile-icon" id="link-perfil"><span class="material-icons-outlined">account_circle</span></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="restaurant-container">
+            <div class="restaurant-info">
+                <h1>NOME DO RESTAURANTE</h1> <p>Tipo de Culinária</p> <p>★★★★★</p> <p>R$00,00 - R$00,00</p> <p><strong>Endereço:</strong> Carregando...</p> <p><strong>Telefone de contato:</strong> Carregando...</p>
+                <div class="buttons">
+                    <button onclick="location.href='#'">Cardápio</button>
+                    <button id="btn-realizar-reserva" onclick="location.href='../Reserva/ReservaDados.html?idEstabelecimento=' + currentRestaurantId">Realizar reserva</button>
+                    <button id="btn-avaliar" onclick="location.href='#'">Avaliar</button>
+                </div>
+            </div>
+            <div id="reviewModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" id="closeReviewModalBtn">&times;</span>
+                    <h3>Deixe sua Avaliação</h3>
+                    <form id="reviewForm">
+                        <div>
+                            <label for="rating">Nota (de 1 a 5 estrelas):</label>
+                            <div class="star-rating">
+                                <input type="radio" id="star5" name="rating" value="5" required/><label for="star5" title="5 estrelas">★</label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 estrelas">★</label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 estrelas">★</label>
+                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 estrelas">★</label>
+                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 estrela">★</label>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="comment">Comentário:</label>
+                            <textarea id="comment" name="comment" rows="4" placeholder="Escreva seu comentário aqui..."></textarea>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit">Enviar Avaliação</button>
+                            <button type="button" class="cancel" id="cancelReviewBtn">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="" alt="Carregando Imagens">
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+        <section id="reviews-section" class="reviews-section">
+            <h2>Avaliações de Clientes</h2>
+            <div id="reviews-list">
+                <p>Carregando avaliações...</p>
+            </div>
+        </section>
+    </main>
+    <script src="perfil_restaurante.js"></script>
+    <script src="../Header/header.js"></script>
+
+</body>
+</html>

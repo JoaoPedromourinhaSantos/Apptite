@@ -1,0 +1,423 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #800000;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a img {
+    width: 20px;
+    height: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Faz com que os filhos (.restaurant-container e #reviews-section) empilhem verticalmente */
+    align-items: center;    /* Centraliza os filhos horizontalmente na página */
+    padding: 20px;
+    gap: 20px; /* Opcional: adiciona um espaço entre o container do restaurante e a seção de avaliações */
+}
+
+.restaurant-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #800000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+}
+
+.restaurant-info {
+    width: 55%;
+}
+
+.carousel {
+    position: relative;
+    width: 40%;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.buttons button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 45%;
+    text-align: center;
+}
+
+.buttons button:hover {
+    background-color: #e6b800;
+}
+
+/* Navbar */
+header {
+    background-color: #8B0000;
+    color: #fff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #8B0000;
+    color: #fff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    color: #fff;
+}
+
+.nav-links a,
+.back-button,
+.icon {
+    margin-left: 20px;
+    color: #fff;
+.nav-links a,
+.back-button,
+.icon {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    transition: color 0.3s;
+}}
+
+.nav-links a:hover,
+.back-button:hover,
+.icon:hover {
+    color: #ffd700;
+}
+
+/* Adicione ao final do seu styles.css */
+
+.buttons button:disabled {
+    background-color: #cccccc; /* Um cinza claro para indicar desabilitado */
+    color: #666666;       /* Cor de texto mais escura para contraste */
+    cursor: not-allowed;  /* Cursor para indicar que não é clicável */
+    opacity: 0.7;         /* Um pouco de transparência */
+}
+
+/* === Adicione estes estilos ao seu arquivo styles.css === */
+
+/* Modal Styles */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed; /* Fica fixo na tela */
+    z-index: 1000; /* Garante que fique sobre outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita scroll se o conteúdo for maior que a tela */
+    background-color: rgba(0,0,0,0.6); /* Fundo escurecido */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Cor de fundo do modal */
+    color: #333; /* Cor do texto dentro do modal */
+    margin: 10% auto; /* 10% do topo e centralizado horizontalmente */
+    padding: 25px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px; /* Largura máxima do modal */
+    border-radius: 10px; /* Bordas arredondadas */
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-content h3 {
+    color: #800000; /* Cor do título do modal, igual ao seu header */
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333; /* Cor mais escura ao passar o mouse */
+    text-decoration: none;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #555;
+}
+
+.modal-content textarea {
+    width: calc(100% - 22px); /* Largura total menos padding e borda */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Fonte consistente */
+    resize: vertical;
+    min-height: 80px;
+}
+
+.modal-content .form-buttons {
+    text-align: right; /* Alinha os botões à direita */
+    margin-top: 20px;
+}
+
+/* Estilo para os botões dentro do modal, aproveitando o estilo do .buttons button */
+.modal-content button {
+    background-color: #ffcc00; /* Cor dos botões, como no seu .buttons button */
+    color: #333; /* Cor do texto para botões amarelos */
+    border: none;
+    padding: 10px 15px; /* Ajuste o padding se necessário */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px; /* Espaçamento entre botões */
+}
+.modal-content button:hover {
+    background-color: #e6b800; /* Cor de hover dos botões */
+}
+
+.modal-content button.cancel {
+    background-color: #ccc; /* Cor para o botão Cancelar */
+    color: #333;
+}
+.modal-content button.cancel:hover {
+    background-color: #bbb;
+}
+
+
+/* Estilo para Input de Estrelas (Star Rating) */
+.star-rating {
+    display: inline-block;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    margin-bottom: 10px;
+    text-align: left; 
+}
+.star-rating input[type="radio"] {
+    display: none;
+}
+.star-rating label {
+    font-size: 2.5em;
+    color: #ddd;
+    cursor: pointer;
+    padding: 0 0.05em;
+    transition: color 0.2s;
+    display: inline-block; /* <<--- ADICIONE ESTA LINHA */
+}
+/* Quando um rádio está checado, todas as estrelas (labels) que vêm *depois* dele na ordem invertida (visualmente antes) ficam douradas */
+.star-rating input[type="radio"]:checked ~ label,
+/* Ao passar o mouse sobre uma estrela, ela e todas as que vêm *depois* na ordem invertida ficam douradas */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #FFD700; /* Cor dourada para estrelas selecionadas/hover */
+}
+
+/* Em styles.css - para a seção de avaliações (verifique se já existe e está correto) */
+.restaurant-container {
+    /* ... seus estilos ... */
+    background-color: #800000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px; /* Largura do container de informações do restaurante */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ESTILOS AJUSTADOS para a seção de avaliações */
+.reviews-section {
+    width: 100%;
+    max-width: 700px;  /* << REDUZIDO: Deixe esta caixa mais estreita que a de informações */
+                       /* Ajuste este valor (ex: 600px, 650px, 750px) conforme sua preferência */
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px 25px; /* Ajuste o padding se necessário, talvez um pouco mais nas laterais */
+    border-radius: 8px; /* Pode ser um pouco diferente do container principal */
+    box-sizing: border-box;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1); /* Sombra suave para destacar a "caixa" */
+}
+
+.reviews-section h2 {
+    color: #800000;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left; /* Alinhar título à esquerda, como em listas de comentários */
+    font-size: 1.6em; /* Tamanho do título da seção de reviews */
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee; /* Linha sutil abaixo do título da seção */
+}
+
+/* Estilos para cada item de avaliação individual */
+.review-item {
+    padding: 15px 0; /* Espaçamento vertical para cada review */
+    border-bottom: 1px solid #f0f0f0; /* Linha separadora bem suave entre os reviews */
+}
+
+.review-item:last-child {
+    border-bottom: none; /* Remove a borda do último item */
+    padding-bottom: 0;
+}
+
+.review-item .review-header {
+    display: flex;
+    align-items: center; /* Alinha nome e data verticalmente se tiverem alturas diferentes */
+    margin-bottom: 6px;
+}
+
+.review-item .review-user {
+    font-weight: bold;
+    color: #333; /* Nome do usuário mais escuro */
+    font-size: 0.95em;
+    margin-right: 10px; /* Espaço entre o nome e a data */
+}
+
+.review-item .review-date {
+    font-size: 0.8em;
+    color: #888; /* Data em cinza mais claro */
+}
+
+.review-item .review-stars {
+    color: #FFD700; /* Dourado para as estrelas */
+    margin-bottom: 8px;
+    font-size: 1em; /* Tamanho um pouco menor para as estrelas na lista */
+}
+
+.review-item .review-comment {
+    font-size: 0.9em; /* Tamanho da fonte do comentário */
+    color: #444;      /* Cor do texto do comentário */
+    line-height: 1.5;
+    word-wrap: break-word;
+    /* white-space: pre-wrap; /* Para preservar quebras de linha e espaços do comentário, se desejado */
+}
+
+#reviews-list p { /* Para mensagens como "Carregando..." ou "Nenhuma avaliação..." */
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-style: italic;
+}
+
+/* Adicionar ao final do seu arquivo perfil.css */
+
+.establishment-reply-container {
+    margin-top: 12px; /* Espaço acima da resposta */
+    padding: 10px 15px;
+    background-color: #f8f0f0; /* Um tom muito claro, levemente avermelhado */
+    border-left: 4px solid #800000; /* Barra lateral na cor principal do tema */
+    border-radius: 0 4px 4px 0; /* Cantos arredondados à direita */
+}
+
+.establishment-reply-header {
+    font-weight: bold;
+    color: #800000; /* Cor do tema para o título "Resposta do Restaurante" */
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.establishment-reply-text {
+    margin: 0;
+    font-size: 0.9em;
+    color: #444; /* Cor de texto escura para boa legibilidade */
+    line-height: 1.5;
+    white-space: pre-wrap; /* Preserva quebras de linha e espaços da resposta */
+}
+
+.restaurant-filtros {
+    margin-top: 15px; /* Espaço acima da seção de filtros */
+    margin-bottom: 10px; /* Espaço abaixo da seção de filtros */
+    color: #fff; /* Cor do texto, como o restante das informações do restaurante */
+}
+
+.restaurant-filtros strong {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#filtrosList {
+    font-size: 0.95em;
+}
