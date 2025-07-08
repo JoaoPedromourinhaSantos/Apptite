@@ -1,0 +1,582 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fdfdfd;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #5b1212;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    width: 350px;
+}
+h2 {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: left;
+    color: #5d0404;
+}
+input {
+    width: 100%;
+    padding: 0px;
+    border: none;
+    border-radius: 5px;
+    margin: 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+.btn {
+    margin-top: 20px;
+    background-color: #f5a623;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: #e09520;
+}
+.delete-link {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+.delete-link:hover {
+    text-decoration: underline;
+}
+
+
+header {
+    background-color: #fff;
+    border-bottom: 2px solid #800000;
+    color: #800000;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-button {
+    color: #800000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #800000;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    color: #800000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-icons a {
+    margin-left: 10px;
+    color: #800000;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+
+.edit-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    top: 20px;
+    border: 2px solid #800000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    position: absolute;
+    text-align: center;
+}
+
+.edit-form h1 {
+    color: #800000;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.edit-form h2 {
+    color: #690101;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.edit-form p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.label {
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #800000;
+}
+
+.edit-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.edit-form input:focus {
+    border-color: #800000;
+    outline: none;
+    box-shadow: 0 0 5px rgba(128, 0, 0, 0.5);
+}
+
+.edit-form button {
+    width: 100%;
+    padding: 12px;
+    background: #800000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.edit-form button:hover {
+    background: #a00000;
+}
+
+.edit-form a {
+    color: #ff9900;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.edit-form a:hover {
+    text-decoration: underline;
+}
+
+
+.filtro-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-filtro {
+    padding: 10px 20px;
+    border-radius: 12px;
+    background-color: #f2f2f2;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+}
+
+.card-filtro:hover {
+    background-color: #e6e6e6;
+}
+
+.card-filtro.selected {
+    background-color: #d0ebff;
+    border-color: #339af0;
+    color: #1c7ed6;
+}
+
+
+
+.btn {
+    padding: .5rem 2rem;
+    border-radius: 5px;
+}
+/*Botão Excluir*/
+.btn-danger {
+    background-color: #FFBF00;
+    color: white;
+    border: none;
+    transition: 0.7s;
+}
+
+.btn-danger i {
+    margin-right: 10px; 
+}
+
+.btn-danger:hover {
+    background-color: #d9534f;
+}
+
+/* Redirecionamento ao clicar em "Delete" */
+.btn-danger:active {
+    background-color: #c9302c;
+}
+
+#myModal {
+    display: none; /* Garante que ele comece oculto */
+    position: fixed;
+    z-index: 999;
+    /* ...outros estilos */
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.botao-voltar-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.botao-voltar {
+    
+    background-color: #8b0000;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.botao-voltar:hover {
+    background-color: #a00000;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+
+.custom-file-button {
+    background-color: #d1c8c8;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.custom-file-button:hover {
+    background-color: #a00000;
+}
+.file-name {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+    font-style: italic;
+}
+
+.edit-form p {
+    color: #690101;
+}
+
+.edit-form .custom-file-button{
+    color: #000000;
+}
+
+p.pHora {
+    text-align: left;
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    background: none;
+    border: none;
+}
+
+
+
+
+/* POP-UP EDITAR HORARIOS */
+.inline-horario {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.inline-horario .popup-content h3 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+}
+
+.dias-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.dia-linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.dia-linha label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.dia-linha input[type="time"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.dia-linha span {
+  margin: 0 5px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Toggle switch */
+.dia-linha input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 45px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-switch::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input[type="checkbox"]:checked + .toggle-switch {
+  background-color: #4CAF50;
+}
+
+input[type="checkbox"]:checked + .toggle-switch::after {
+  transform: translateX(21px);
+}
+
+
+/* Em editar.css */
+
+/* Ajuste para o container principal das prévias (file-list) */
+#file-list {
+    display: flex;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    gap: 8px; /* Espaço entre os itens da lista */
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px dashed #cccccc;
+    border-radius: 5px;
+    min-height: 40px; /* Altura mínima */
+    background-color: #fdfdfd;
+}
+
+/* Estilo para cada item na lista de prévias da galeria */
+.galeria-item-representacao {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column; /* Itens internos empilhados */
+    gap: 6px; /* Espaço entre nome, ordem e botões */
+}
+
+.galeria-nome-arquivo {
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona "..." se o nome for muito longo */
+    max-width: 100%;
+}
+
+.galeria-item-representacao span { /* Para o span da ordem */
+    font-size: 0.85em;
+    color: #555;
+}
+
+.galeria-item-botoes {
+    display: flex;
+    gap: 8px; /* Espaço entre os botões Visualizar e Remover */
+    margin-top: 5px;
+}
+
+.galeria-item-representacao .btn-visualizar-previa,
+.galeria-item-representacao .btn-remover-previa {
+    padding: 6px 12px;
+    font-size: 0.8em;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: 500;
+}
+
+.btn-visualizar-previa {
+    background-color: #6c757d; /* Cinza escuro para o botão */
+    color: white;
+    border-color: #6c757d;
+}
+.btn-visualizar-previa:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.btn-remover-previa {
+    background-color: #dc3545; /* Vermelho para o botão remover */
+    color: white;
+    border-color: #dc3545;
+}
+.btn-remover-previa:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* --- Estilos para o Modal de Visualização de Imagem --- */
+.modal-imagem-galeria {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica fixo na tela */
+    z-index: 1050;   /* Garante que fique sobre outros elementos (ajuste se necessário) */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite scroll se o conteúdo for maior que a tela */
+    background-color: rgba(0, 0, 0, 0.75); /* Fundo escurecido */
+    justify-content: center; /* Centraliza o conteúdo do modal horizontalmente */
+    align-items: center;     /* Centraliza o conteúdo do modal verticalmente */
+    padding: 15px; /* Evita que o conteúdo cole nas bordas */
+    box-sizing: border-box;
+}
+
+.modal-imagem-galeria-content {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    position: relative; /* Para posicionar o botão de fechar */
+    text-align: center;
+    width: auto; /* Ajusta à largura da imagem, com limite */
+    max-width: 85%;
+    max-height: 85vh; /* Limita a altura máxima */
+    display: flex;
+    flex-direction: column; /* Organiza título e imagem verticalmente */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-imagem-galeria-content h3 { /* Título do modal */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#imagemEmModal {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o container do modal */
+    max-height: calc(85vh - 70px); /* Altura máxima da imagem, descontando padding e título */
+    display: block; /* Remove espaço extra abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem se ela for menor que max-width */
+    object-fit: contain; /* Mostra a imagem inteira, mantendo proporção */
+}
+
+.modal-imagem-galeria-close-btn {
+    color: #777;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.modal-imagem-galeria-close-btn:hover,
+.modal-imagem-galeria-close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+

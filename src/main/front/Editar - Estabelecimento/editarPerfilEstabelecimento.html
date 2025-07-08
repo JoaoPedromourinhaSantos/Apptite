@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="editar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>Editar Perfil</title>
+    <script src="editar.js"></script>
+</head>
+<body>
+    <div class="botao-voltar-container">
+        <a href="../Perfil - Estabelecimento/perfil_Estabelecimento.html" class="botao-voltar">← Voltar</a>
+    </div>
+    <section class="edit-form">
+        <h1>Editar informações</h1>
+        <h2>Informações do perfil</h2>
+        <p>Insira as informações que queira editar:</p>
+
+        <form id="form-editar" method="POST" enctype="multipart/form-data">
+
+            <label for="description">Descrição</label>
+            <input type="text" id="description" name="description" placeholder="Digite a descrição" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone" placeholder="Digite o telefone" required>
+
+            <label for="cardapio">Foto do cardápio</label>
+            <div class="file-input-container">
+            <label class="custom-file-button" for="cardapio">Escolher Arquivo</label>
+            <input type="file" id="cardapio" name="cardapio" accept="image/*" required>
+            </div>
+            <div id="file-name-container">
+                <span class="file-name">Nenhum arquivo escolhido</span>
+            </div>
+
+            <label for="galeria">Galeria de imagens</label>
+            <div class="file-input-container">
+                <label class="custom-file-button" for="galeria">Escolher Arquivos</label>
+                <input type="file" id="galeria" name="galeria" accept="image/*" multiple>
+            </div>
+            <div id="file-list"></div>
+
+            <label for="faixa">Faixa de preço</label>
+            <input type="text" id="faixaP" name="faixa" placeholder="Digite o preço médio" required>
+
+            <h2>Informações da conta</h2>
+            <p>Insira as informações que queira editar:</p>
+
+            <label for="name">Nome do restaurante</label>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+
+            <label for="cnpj">CNPJ</label>
+            <input type="text" id="cnpj" name="cnpj" placeholder="Digite o CNPJ" required>
+
+            <label for="rua">Endereço do restaurante</label>
+            <input type="text" id="rua" name="rua" placeholder="Rua" required>
+            <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
+            <input type="text" id="numero" name="numero" placeholder="Número" required>
+            <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
+            <input type="text" id="estado" name="estado" placeholder="Estado" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+            <label for="senha">Senha</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" class="form-control" placeholder="Senha">
+            </div>
+
+            <div class="password-wrapper">
+                <input type="password" id="confirm-password" class="form-control" placeholder="Confirmar senha">
+            </div>
+
+            <br>
+
+            <button type="submit" id="confirmarBtn">Confirmar</button>
+        </form>
+
+        <p> <button type="button" class="btn btn-primary" id="openModal">Excluir Conta</button> </p>
+
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Deseja mesmo excluir sua conta?</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <p>ESSA AÇÃO É IRREVERSÍVEL</p>
+                        <button type="button" class="btn btn-secondary" id="closeModal">CANCELAR</button>
+                        <button class="btn btn-danger" id="deleteAccount">
+                            <i class="fa-solid fa-trash"></i> EXCLUIR
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="modalVisualizacaoImagem" class="modal-imagem-galeria">
+        <div class="modal-imagem-galeria-content">
+            <span class="modal-imagem-galeria-close-btn" onclick="fecharModalImagem()">&times;</span>
+            <h3 id="modalImagemTitulo">Visualizando Imagem</h3>
+            <img id="imagemEmModal" src="" alt="Prévia da Imagem Selecionada"/>
+        </div>
+    </div>
+
+</body>
+</html>
