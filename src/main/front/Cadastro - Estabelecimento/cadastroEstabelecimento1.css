@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #fceae5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+  width: 100%;
+  background-color: #5a1a1a;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0px 4px 6px rgba(236, 228, 228, 0.2);
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.search-icon, .profile-icon {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.material-icons-outlined {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilização do formulário */
+.form-container {
+  background-color: #5a1a1a;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: #ffb84d;
+  width: 110%; /* Mantém uma largura responsiva */
+  max-width: 1600px; /* Limita o tamanho máximo */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  min-height: 580px; /* Define uma altura mínima maior */
+  /* Centraliza horizontalmente */
+  margin: 100px auto 0; /* Topo ajustado para evitar sobreposição com o header */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; /* Centraliza os itens dentro do container */
+}
+.form-container h2,
+.p{
+  position: relative;
+  top: -30px; /* Ajuste esse valor para mover o texto para cima */
+}
+/* Estilizando as colunas */
+.form-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Cada coluna */
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+}
+
+/* Campos de entrada */
+input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background-color: #fff;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+input:focus {
+  outline: none;
+  background-color: #f5f5f5;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de envio */
+button {
+  padding: 12px;
+  background-color: #ffb84d;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 50%;
+  display: block;
+  margin: 20px auto 0;
+}
+
+button:hover {
+  background-color: #e2d3bc;
+}
+
+/* Link de login */
+.login-link {
+  margin-top: 15px;
+  color: #d8b6a3;
+}
+
+.login-link a {
+  color: #ffb84d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .form-columns {
+      flex-direction: column;
+  }
+}
