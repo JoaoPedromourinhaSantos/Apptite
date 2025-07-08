@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" class="back-arrow"><span class="material-icons-outlined">arrow_back</span></a>
+        <nav>
+            <a href="../Home/home.html">Home</a>
+        </nav>
+        <div class="icons">
+            <a href="../Login/login.html" class="profile-icon" id="link-perfil"><span class="material-icons-outlined">account_circle</span></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+
+            <form>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Digite seu e-mail">
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Digite sua senha">
+
+                <label for="tipo">Tipo de conta</label>
+                <select id="tipo">
+                    <option value="usuario">Usuário</option>
+                    <option value="estabelecimento">Estabelecimento</option>
+                </select>
+                
+                <a href="../Esqueceu Senha/esqueceuSenha.html" class="forgot-password">Esqueceu sua senha?</a>
+            
+                <button type="submit" class="btn" id="loginButton">Entrar</button>
+            </form>
+            
+            <p class="register">
+                Não possui uma conta? <a href="../Cadastro - Usuário/cadastrousuário.html">Cadastre-se</a>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="login.js"></script>
+<script src="../Header/header.js"></script>
+
+</html>
