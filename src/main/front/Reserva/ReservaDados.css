@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #800000; /* Vermelho Apptite */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 25px 30px; /* Aumentado o padding lateral */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #800000; /* Vermelho Apptite */
+    margin-bottom: 10px;
+}
+
+h2#restaurantName {
+    font-size: 1.2em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 8px; /* Aumentado margin-bottom */
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px; /* Aumentado margin-bottom */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Para remover as setas de incremento/decremento no input number */
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Chrome, Safari, Edge, Opera */
+}
+
+button[type="submit"] {
+    background-color: #800000; /* Vermelho Apptite */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Espaço antes do botão */
+}
+
+button[type="submit"]:hover {
+    background-color: #600000; /* Vermelho Apptite mais escuro */
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #800000; /* Vermelho Apptite */
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para inputs focados */
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus {
+    border-color: #800000; /* Vermelho Apptite */
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25); /* Sombra suave */
+}

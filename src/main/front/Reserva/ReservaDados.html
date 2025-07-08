@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Reserva - Apptite</title>
+    <link rel="stylesheet" href="reservaDados.css">
+</head>
+<body>
+    <header>
+        <span class="logo">Apptite</span>
+    </header>
+
+    <div class="container">
+        <h1>Solicitar Reserva</h1>
+        <h2 id="restaurantName">Carregando informações do restaurante...</h2>
+        <form id="formSolicitarReserva">
+            <div>
+                <label for="dataReserva">Data da Reserva:</label>
+                <input type="date" id="dataReserva" name="dataReserva" required>
+            </div>
+            <div>
+                <label for="horarioChegada">Horário de Chegada:</label>
+                <input type="time" id="horarioChegada" name="horarioChegada" step="1800" required> </div>
+            <div>
+                <label for="quantidadePessoas">Quantidade de Pessoas:</label>
+                <input type="number" id="quantidadePessoas" name="quantidadePessoas" min="1" value="2" max="20" required>
+            </div>
+            <button type="submit">Solicitar Reserva</button>
+        </form>
+        <a href="#" id="voltarPerfilRestaurante" class="back-link">Voltar ao Perfil do Restaurante</a>
+    </div>
+
+    <script src="reservaDados.js"></script>
+</body>
+</html>
