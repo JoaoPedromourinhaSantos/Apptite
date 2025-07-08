@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Perfil - Apptite</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="perfil.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <a href="#" class="back-button"></a>
+            <span class="logo">Apptite</span>
+            <div class="nav-links">
+                <a href="../Home/home.html" class="nav-link">Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- Direcionar para editar/excluir -->
+    <div class="edit-container">
+        <a href="../Editar - Usuário/editarPerfilCliente.html" class="edit-button">✎</a>
+    </div>
+
+    <button id="logoutBtn">LogOut</button>
+
+    <!-- Cliente dados -->
+    <section class="dadosUser">
+        <div class="box">
+            <img alt="Foto de perfil" class="profile-pic">
+            <h1><span id="nomeUsuario"></span></h1>
+            <p id="descricaoUsuario">Descrição / Biografia</p>
+        </div>
+    </section>
+
+    <!-- Estabelecimento avaliados (1/2) -->
+    <section class="minhas-avaliacoes-container">
+        <h2>Minhas Avaliações</h2>
+        <div id="lista-minhas-avaliacoes">
+            <p>Carregando minhas avaliações...</p>
+        </div>
+    </section>
+
+</body>
+<script src="perfil_usuario.js"></script>
+</html>

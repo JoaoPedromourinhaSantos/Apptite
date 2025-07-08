@@ -1,0 +1,138 @@
+/* Estilo Global */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fdf5f5;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 2px solid #800000;
+    color: #800000;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-button {
+    color: #800000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #800000;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    color: #800000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-icons a {
+    margin-left: 10px;
+    color: #800000;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #800000;
+    width: 90%;
+    margin: 15px auto;
+}
+
+.edit-container {
+    text-align: right;
+    margin-right: 50px;
+}
+
+.edit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #800000;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 100%;
+    transition: background 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #f1d1d1;
+    color: #800000;
+}
+
+.dadosUser {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    width: auto;
+    max-width: 800px;
+    background-color: transparent;
+}
+
+/* Foto de perfil */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #800000;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.box-avaliacao {
+    text-align: left;
+    margin: 30px auto;
+    padding: 10px;
+    width: auto;
+    max-width: 800px;
+    border: 1.5px solid #800000;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+#logoutBtn {
+    display: block; /* Para que a margem automática funcione */
+    width: fit-content; /* Largura se ajusta ao conteúdo */
+    margin: 10px 50px 20px auto; /* Alinha o botão à direita, abaixo do botão de editar */
+    padding: 8px 18px;
+    background-color: #800000; /* Cor primária do tema */
+    color: white; /* */
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold; /* */
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logoutBtn:hover {
+    background-color: #660000; /* Um tom de vermelho um pouco mais escuro */
+}
