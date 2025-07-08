@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filtros</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <button class="back-btn" title="Voltar">&#8592;</button>
+    <h1>Filtros</h1>
+    <p>Encontre o restaurante ideal para você!</p>
+  </header>
+
+  <main>
+    <section class="filter-box">
+      <h2>Culinária 🍱</h2>
+      <div class="options">
+        <label><input type="checkbox" name="culinaria" value="Japonesa"> Japonesa</label>
+        <label><input type="checkbox" name="culinaria" value="Chinesa"> Chinesa</label>
+        <label><input type="checkbox" name="culinaria" value="Árabe"> Árabe</label>
+        <label><input type="checkbox" name="culinaria" value="Mexicana"> Mexicana</label>
+        <label><input type="checkbox" name="culinaria" value="Italiana"> Italiana</label>
+        <label><input type="checkbox" name="culinaria" value="Francesa"> Francesa</label>
+      </div>
+    </section>
+
+    <section class="filter-box">
+      <h2>Distância 🚶‍♀️</h2>
+      <div class="slider-container">
+        <span>0 km</span>
+        <input type="range" id="distancia" min="0" max="10" value="2">
+        <span>10 km</span>
+      </div>
+      <p>Selecionado: <strong id="distanciaValor">2</strong> km</p>
+    </section>
+
+    <section class="filter-box">
+      <h2>Valor 💸</h2>
+      <div class="options">
+        <label><input type="checkbox" name="valor" value="10-50"> R$ 10,00 - 50,00</label>
+        <label><input type="checkbox" name="valor" value="60-100"> R$ 60,00 - 100,00</label>
+        <label><input type="checkbox" name="valor" value="110-150"> R$ 110,00 - 150,00</label>
+        <label><input type="checkbox" name="valor" value="160-200"> R$ 160,00 - 200,00</label>
+        <label><input type="checkbox" name="valor" value=">200"> Acima de R$200,00</label>
+      </div>
+    </section>
+
+    <section class="filter-box">
+      <h2>Avaliações ⭐</h2>
+      <div class="options">
+        <label><input type="checkbox" name="avaliacao" value="1"> ★</label>
+        <label><input type="checkbox" name="avaliacao" value="2"> ★★</label>
+        <label><input type="checkbox" name="avaliacao" value="3"> ★★★</label>
+        <label><input type="checkbox" name="avaliacao" value="4"> ★★★★</label>
+        <label><input type="checkbox" name="avaliacao" value="5"> ★★★★★</label>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="buttons">
+      <button class="confirm-btn">Confirmar</button>
+      <button class="reset-btn">Limpar</button>
+      <button class="next-btn" title="Avançar">&#8594;</button>
+    </div>
+    <a href="#">Prefiro ver sugestões</a>
+  </footer>
+
+  <div class="resultado" id="resultado"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
