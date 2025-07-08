@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="editarHorario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>Editar Perfil</title>
+    <script src="editarHorario.js"></script>
+</head>
+<body>
+    <div class="botao-voltar-container">
+        <a href="../Perfil - Estabelecimento/perfil_Estabelecimento.html" class="botao-voltar">← Voltar</a>
+    </div>
+    <section class="edit-form">
+        <h1>Editar informações</h1>
+        <h2>Informações Horário de Funcionamento</h2>
+        <p>Insira os horários e dias de funcionamento de seu estabelecimento</p>
+
+       <form id="form-editar" method="POST" enctype="multipart/form-data">
+
+      <!-- Botão e resumo dos horários -->
+      <label>Horário de funcionamento</label>
+      <div id="popupHorario" class="inline-horario">
+        <div class="popup-content">
+          <form id="formHorarios">
+          <div class="dias-container">
+          <!-- Campos serão inseridos aqui pelo JS -->
+
+          </div>
+          </form>
+        </div>
+      </div>
+      <input type="hidden" name="horariosJson" id="horariosJson">
+      
+      <div id="file-list"></div>
+      
+      <button type="submit" id="confirmarBtn">Confirmar</button>
+      </form>
+
+    </section>
+
+</body>
+</html>
