@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redefinir Senha</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+        <a href="#" class="back-button">← Voltar</a>
+        <span class="logo">Apptite</span>
+        <div class="nav-links">
+            <a href="../Home/home.html" class="nav-link">Home</a>
+            <a href="../Perfil estabelecimento (visão cliente)/perfil.html" class="nav-link">Restaurantes</a>
+        </div>
+        <div class="nav-icons">
+            <a href="../Login/login.html" class="profile-icon" id="link-perfil"><span class="material-icons-outlined">account_circle</span></a>
+        </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="registration-form">
+      <h1>Redefinir Senha</h1>
+      <form id="resetarSenhaForm" action="http://localhost:8080/resetar-senha" method="POST">
+        <label for="token">Código:</label>
+        <input type="text" id="token" placeholder="Digite o código" required><br><br>
+
+        <label for="novaSenha">Nova Senha:</label>
+        <input type="password" id="novaSenha" placeholder="Digite sua nova senha" required><br><br>
+
+        <button type="submit">Redefinir Senha</button>
+      </form>
+      <p id="mensagem"></p>
+      <a href="../Login/login.html">Login</a>
+    </section>
+  </main>
+
+  <script src="resetarSenha.js"></script>
+  <script src="../Header/header.js"></script>
+
+</body>
+</html>
