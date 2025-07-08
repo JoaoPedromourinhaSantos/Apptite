@@ -1,0 +1,124 @@
+/* Estilo Global */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fdfdfd;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 2px solid #800000;
+    color: #800000;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-button {
+    color: #800000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #800000;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    color: #800000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-icons a {
+    margin-left: 10px;
+    color: #800000;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+
+.registration-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #800000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.registration-form h1 {
+    color: #800000;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.registration-form p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.registration-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #800000;
+}
+
+.registration-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.registration-form input:focus {
+    border-color: #800000;
+    outline: none;
+    box-shadow: 0 0 5px rgba(128, 0, 0, 0.5);
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 12px;
+    background: #800000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.registration-form button:hover {
+    background: #a00000;
+}
+
+.registration-form a {
+    color: #ff9900;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.registration-form a:hover {
+    text-decoration: underline;
+}
